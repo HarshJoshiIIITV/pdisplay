@@ -14,7 +14,7 @@ class App extends Component {
 		};
   }
   componentDidMount(){
-    axios.get('https://boiling-plateau-31660.herokuapp.com/data').then((resp)=>{
+    axios.get('https://cors-anywhere.herokuapp.com/https://boiling-plateau-31660.herokuapp.com/data').then((resp)=>{
       this.setState({
         output:resp.data
       })  
@@ -42,7 +42,7 @@ class App extends Component {
 
   onsubmit=()=>{
     const curr_state={title:this.state.title,description:this.state.description,image:this.state.image}
-    axios.post('https://boiling-plateau-31660.herokuapp.com/',
+    axios.post('https://cors-anywhere.herokuapp.com/https://boiling-plateau-31660.herokuapp.com/',
         curr_state
 			)
 			.then((resp) => {
