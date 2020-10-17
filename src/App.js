@@ -64,7 +64,7 @@ class App extends Component {
 			<div className='App'>
         {
           this.state.register?<button  style={{margin:"20px"}} onClick={this.toggle_register}>Close registration form</button>
-          :<button style={{margin:"20px"}} onClick={this.toggle_register}>Open registration form</button>
+          :<button style={{margin:"20px"}} onClick={this.toggle_register}>Open gistration form</button>
         }
         {this.state.register ? (
 					<div className="form"> 
