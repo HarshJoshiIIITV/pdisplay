@@ -13,15 +13,15 @@ class App extends Component {
         output:null
 		};
   }
-  componentDidMount(){
-    axios.get('https://boiling-plateau-31660.herokuapp.com/data').then((resp)=>{
-      this.setState({
-        output:resp.data
-      })  
-      console.log(this.state.output);
+  // componentDidMount(){
+  //   axios.get('https://boiling-plateau-31660.herokuapp.com/data').then((resp)=>{
+  //     this.setState({
+  //       output:resp.data
+  //     })  
+  //     console.log(this.state.output);
     
-    })
-  }
+  //   })
+  // }
 	changeRoute = (id, entries) => {
 		this.setState({
 			id: id,
@@ -50,8 +50,6 @@ class App extends Component {
 			.then((resp) => {
         document.getElementById('adding').innerHTML =
         '<p style="margin:0px;color:red">Profile added successfully</p>';
-
-
 			})
 			.catch((err) => {
 				document.getElementById('adding').innerHTML =
