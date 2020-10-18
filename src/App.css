@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
 .form {
 	border: 1px solid black;
 	padding: 10px;
@@ -17,7 +17,7 @@
 }
 
 .form div input {
-	width: 250px;
+	width: 270px;
 }
 
 .cards {
@@ -30,7 +30,8 @@
 	width: 20%;
 	border-radius: 5px;
 	padding: 10px;
-	height: fit-content;
+	height: 350px;
+	overflow-y: scroll;
 	margin: 20px;
 	background-color: rgba(255, 255, 255, 255);
 }
@@ -66,17 +67,46 @@ input {
 
 img {
 	width: 70%;
-	height: 60%;
+	height: 200px;
 	margin: 5px auto;
 	text-align: center;
 	display: block;
 }
 
 .card h4 {
-	margin-bottom: 0px;
-	margin-top: 0px;
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
 }
 .card p {
 	margin-bottom: 0.5em;
 	margin-top: 0.5em;
+}
+
+.App h1 {
+	font-family: Nunito !important;
+	color: white;
+	border-bottom: 0.5px solid white;
+}
+
+.form {
+	background-color: rgba(255, 255, 255, 0.4);
+	border-radius: 10px;
+	border: none;
+}
+
+@media (max-width: 450px) {
+	.form {
+		width: 300px;
+	}
+	h1 {
+		font-size: 22px;
+	}
+	.card {
+		width: 33%;
+		height: 300px;
+	}
+	img {
+		width: 100%;
+		height: 100px;
+	}
 }
