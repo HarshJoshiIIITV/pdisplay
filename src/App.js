@@ -157,8 +157,9 @@ class App extends Component {
          
        </div>
         
-        
-        <div className="cards">
+        {this.state.register==false?
+        <div>
+           <div className="cards">
         {this.state.queue.length ?
 					this.submit_less().map((response, i) => {
             return(
@@ -181,9 +182,14 @@ class App extends Component {
             )
           }):null}
         </div>
-        {this.state.show_more && !this.state.show_more_data? <button style={{display:'block',margin:'5px auto',marginBottom:'30px'}} className="button_window" onClick={this.toggle_showmore}>Show more ({this.state.queue.length-6})</button>:null}
-      {this.state.show_more_data  && this.state.show_more? <button  onClick={this.toggle_showmore} style={{display:'block',margin:'10px auto',marginBottom:'30px'}} className="button_window">Show Less</button>:null}
-			</div>
+        {this.state.show_more && !this.state.show_more_data? <button style={{display:'block',margin:'5px auto',marginBottom:'30px'}} className="button_window" onClick={this.toggle_showmore}>Queue({this.state.queue.length-6})</button>:null}
+      {this.state.show_more_data  && this.state.show_more? <button  onClick={this.toggle_showmore} style={{display:'block',margin:'10px auto',marginBottom:'30px'}} className="button_window">Show less</button>:null}
+			
+
+        </div>
+      
+     :null }
+       </div>
 		);
 	}
 }
