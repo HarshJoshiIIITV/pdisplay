@@ -13,8 +13,9 @@ class App extends Component {
         output:null
 		};
   }
+  //GET IS WORKING
   componentDidMount(){
-    axios.get('https://boiling-plateau-31660.herokuapp.com/data').then((resp)=>{
+    axios.get('https://boiling-plateau-31660.herokuapp.com/').then((resp)=>{
       this.setState({
         output:resp.data
       })  
@@ -42,7 +43,8 @@ class App extends Component {
 
   onsubmit=()=>{
     const curr_state={title:this.state.title,description:this.state.description,image:this.state.image}
-    axios.post('https://boiling-plateau-31660.herokuapp.com/',
+    //This is not working
+    axios.post('https://boiling-plateau-31660.herokuapp.com/data',
         curr_state
 			)
 			.then((resp) => {
@@ -60,7 +62,7 @@ class App extends Component {
 			<div className='App'>
         {
           this.state.register?<button  style={{margin:"20px"}} onClick={this.toggle_register}>Close registration form</button>
-          :<button style={{margin:"20px"}} onClick={this.toggle_register}>Open gistration form</button>
+          :<button style={{margin:"20px"}} onClick={this.toggle_register}>Open Registration form</button>
         }
         {this.state.register ? (
 					<div className="form"> 
@@ -86,52 +88,9 @@ class App extends Component {
           <div className="card">
             <img src="https://i.pinimg.com/originals/44/ce/2c/44ce2cfa6267fde44790205135a78051.jpg" width="100%" height="40%" />
             <p>fsdfsdfsdfds</p>
-            <p>dfsssssssssssssssssssssssssssssssssssssssssssss</p>
+            <p>dfsssssssssssssssssssss</p>
 
           </div>
-          <div className="card">
-            <img src="https://i.pinimg.com/originals/44/ce/2c/44ce2cfa6267fde44790205135a78051.jpg" width="100%" height="40%" />
-            <p>fsdfsdfsdfds</p>
-            <p>dfsssssssssssssssssssssssssssssssssssssssssssss</p>
-
-          </div>
-          <div className="card">
-            <img src="https://i.pinimg.com/originals/44/ce/2c/44ce2cfa6267fde44790205135a78051.jpg" width="100%" height="40%" />
-            <p>fsdfsdfsdfds</p>
-            <p>dfsssssssssssssssssssssssssssssssssssssssssssss</p>
-
-          </div>
-          <div className="card">
-            <img src="https://i.pinimg.com/originals/44/ce/2c/44ce2cfa6267fde44790205135a78051.jpg" width="100%" height="40%" />
-            <p>fsdfsdfsdfds</p>
-            <p>dfsssssssssssssssssssssssssssssssssssssssssssss</p>
-
-          </div>
-          <div className="card">
-            <img src="https://i.pinimg.com/originals/44/ce/2c/44ce2cfa6267fde44790205135a78051.jpg" width="100%" height="40%" />
-            <p>fsdfsdfsdfds</p>
-            <p>dfsssssssssssssssssssssssssssssssssssssssssssss</p>
-
-          </div>
-          <div className="card">
-            <img src="https://i.pinimg.com/originals/44/ce/2c/44ce2cfa6267fde44790205135a78051.jpg" width="100%" height="40%" />
-            <p>fsdfsdfsdfds</p>
-            <p>dfsssssssssssssssssssssssssssssssssssssssssssss</p>
-
-          </div>
-          <div className="card">
-            <img src="https://i.pinimg.com/originals/44/ce/2c/44ce2cfa6267fde44790205135a78051.jpg" width="100%" height="40%" />
-            <p>fsdfsdfsdfds</p>
-            <p>dfsssssssssssssssssssssssssssssssssssssssssssss</p>
-
-          </div>
-          <div className="card">
-            <img src="https://i.pinimg.com/originals/44/ce/2c/44ce2cfa6267fde44790205135a78051.jpg" width="100%" height="40%" />
-            <p>fsdfsdfsdfds</p>
-            <p>dfsssssssssssssssssssssssssssssssssssssssssssss</p>
-
-          </div>
-
         </div>
         
 			</div>
